@@ -23,7 +23,7 @@ void BFS(int x) {
 }
 
 int main() {
-	freopen("/home/mimi0007/Desktop/Temp/in", "r", stdin);
+	//freopen("/home/mimi0007/Desktop/Temp/in", "r", stdin);
 	int T;
 	while(cin >> T) {
 		if(T==0)
