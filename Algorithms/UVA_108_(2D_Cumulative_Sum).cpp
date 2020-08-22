@@ -51,3 +51,17 @@ int ma = INT_MIN, sum;
 	cout << ma << endl;
 	return 0;
 }
+
+/*
+n = 3, a 3*3 matrix
+
+0,0  0,1  0,3
+1,0  1,1  1,3
+2,0  2,1  2,3
+
+starting - 1,1
+destination - 2,3
+ar[i-1][l] = 0,3
+ar[k][j-1] = 2,0
+ar[i-1][j-1] = 0,0
+*/
