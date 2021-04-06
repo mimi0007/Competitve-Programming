@@ -11,7 +11,7 @@ ll dp[105][25005], ar[505], n; //hightest coin 100, every value max = 500 , 500*
 
 ll knapsack(ll ind, ll wt) {
 	if(dp[ind][wt] != -1) return dp[ind][wt];
-	if(ind >= n || wt <= 0)  return 0;
+	if(ind >= n || wt == 0)  return 0; //when sack is empty, return 0
 	ll res = 0;
 	if(wt- ar[ind] >= 0) {
 		res = ar[ind] + knapsack(ind+1, wt- ar[ind]); //as a coin has the value/price of its own
