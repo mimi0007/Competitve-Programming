@@ -12,22 +12,24 @@ ll dirkx[] = {-1, 1, 0, 0, -1, -1, 1, 1}, dirky[] = {0, 0, 1, -1, -1, 1, -1, 1};
 ll ar[23][5], n, dp[23][5];
 
 ll sum(ll ind, ll ch) {
+	ll &res = dp[ind][ch]; //res will work as the adress of dp[ind][ch]
+	
 	if(ind == n)
 		return 0;
 		
-	if(dp[ind][ch] != -1)
-		return dp[ind][ch];
+	if(res] != -1)
+		return res;
 	
 	if(ch == 0)
-		dp[ind][ch] = ar[ind][0] + min(sum(ind+1, 1), sum(ind+1, 2)); //memorization
+		res = ar[ind][0] + min(sum(ind+1, 1), sum(ind+1, 2));//res will store the value and send it to dp[ind][ch]
 		
 	else if(ch == 1) 
-		dp[ind][ch] = ar[ind][1] + min(sum(ind+1, 0), sum(ind+1, 2));
+		res = ar[ind][1] + min(sum(ind+1, 0), sum(ind+1, 2));
 	
 	else
-		dp[ind][ch] = ar[ind][2] + min(sum(ind+1, 0), sum(ind+1, 1));
+		res = ar[ind][2] + min(sum(ind+1, 0), sum(ind+1, 1));
 		
-	return dp[ind][ch];
+	return res;
 }
 
 int main() {
