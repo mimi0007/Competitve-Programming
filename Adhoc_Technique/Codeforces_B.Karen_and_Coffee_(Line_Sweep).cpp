@@ -14,7 +14,7 @@ int main()    {
 	//memset(arr, 0, sizeof(arr));
 	while(n--) {
 		cin >> x >> y;
-		ar[x]++; //line sweep
+		ar[x]++; //line sweep -> (to detect How many in a range)
 		ar[y+1]--; //line sweep
 	}
 	for(ll i = 1; i <= 200001 ; i++) {
